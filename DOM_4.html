@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOM Structure Analysis</title>
+  <title>Replace & Updatee</title>
 </head>
 <body>
   <div id="parent">
@@ -10,7 +10,7 @@
     <p>This is a paragraph.</p>
 
     <ul id="table">
-      <li>Item 1</li>
+      <li>This item</li>
       <li id="target">Item 2 (Target)</li>
       <li>Item 3</li>
     </ul>
@@ -24,7 +24,7 @@
     // Get the parent element
     const parent = document.getElementById('parent');
 
-    // 1️⃣ Log all children elements of parent
+    // Get all children elements of parent
     console.log("All children of parent:", parent.children);
 
     const target = document.getElementById('table')

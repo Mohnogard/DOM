@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOM Structure Analysis</title>
+  <title>DOM Traversing Challenge</title>
 </head>
 <body>
   <div id="parent">
@@ -24,16 +24,14 @@
     // Get the parent element
     const parent = document.getElementById('parent');
 
-    // 1️⃣ Log all children elements of parent
+    // Log all children elements of parent
     console.log("All children of parent:", parent.children);
 
     const target = document.getElementById('table')
     console.log("Previous sibling of target:", target.children);
     console.log(target.children[0].textContent)
     console.log(document.getElementById('target'))
-    // Optional: log all siblings of target
-    // const siblings = Array.from(target.parentElement.children).filter(el => el !== target);
-    // console.log("All siblings of target:", siblings);
+
   </script>
 </body>
 </html>
