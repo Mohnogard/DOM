@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Button</title>
+</head>
+<style>
+
+
+.box-style {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.off {
+  display: none;
+}
+.RED{
+  color: red;
+}
+.GREEN{
+  color: rgb(21, 248, 21);
+}
+
+</style>
+
+<body>
+<div id="app">
+</div>
+
+<script>
+
+// Get base container
+const app = document.getElementById("app");
+
+
+// Create original text
+const mytext = document.createElement("div")
+mytext.textContent =Number(0)
+
+const increase = document.createElement("button");
+increase.textContent = "+";
+const decrease = document.createElement("button");
+decrease.textContent = "-";
+
+
+mytext.style.border='1px solid black'
+mytext.style.textAlign='center'
+
+// Assemble everything
+app.appendChild(increase);
+app.appendChild(decrease)
+app.appendChild(mytext)
+
+// Start with "original", then after clicking it changes
+let count = 0;
+
+app.addEventListener("click", (e) => {
+  if (e.target === increase) {
+    count++;
+  } else if (e.target === decrease) {
+    count--;
+  }
+
+  mytext.textContent = count;
+
+  // Update color
+  if (count < 0) {
+    mytext.classList.add("RED");
+    mytext.classList.remove("GREEN");
+  } else if (count > 0){
+    mytext.classList.add("GREEN");
+    mytext.classList.remove("RED");
+  } else {
+    mytext.classList.remove("RED");
+    mytext.classList.remove("GREEN");
+  }
+});
+
+
+console.log(count)
+  </script>
+</body>
+</html>

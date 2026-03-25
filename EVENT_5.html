@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Button</title>
+</head>
+<style>
+
+
+.box-style {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.off {
+  display: none;
+}
+</style>
+
+<body>
+<div id="app">
+</div>
+
+<script>
+
+// Get base container
+const app = document.getElementById("app");
+
+// Create toggling button
+const toggle = document.createElement("button");
+toggle.textContent = "Open Menu";
+toggle.id = "toggle";
+toggle.classList.add("box-style")
+
+// Create original text
+const mytext = document.createElement("input")
+mytext.placeholder = "Change me"
+
+mytext.style.border='1px solid black'
+mytext.style.textAlign='center'
+
+// Assemble everything
+app.appendChild(toggle);
+app.appendChild(mytext)
+
+// Start with "original", then after clicking it changes
+toggle.addEventListener("click", (e) => {
+  mytext.classList.toggle("off")});
+
+  </script>
+</body>
+</html>

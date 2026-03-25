@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Content Builder</title>
+  <style>
+    /* Optional styling for the card */
+    .card {
+      border: 1px solid #c6c6c6;
+      border-radius: 5px;
+      width: 300px;
+      padding: 16px;
+      margin: auto;
+      background-color: #797979;
+      font-family: Arial, sans-serif;
+    }
+    .card1 {
+      border: 1px solid #797979;
+      border-radius: 5px;
+      background-color: #5a5a5a;
+      width: 300px;
+      padding: 16px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    // Select container
+    const app = document.getElementById('app');
+
+    // Create card element
+    const card = document.createElement('div');
+    card.classList.add('card1');
+
+    // Create and append title
+    const title = document.createElement('h2');
+    title.textContent = "Dynamic Card Title";
+    card.appendChild(title);
+
+    // Create and append description
+    const description = document.createElement('p');
+    description.textContent = "This description was created entirely using JavaScript.";
+    card.appendChild(description);
+
+
+
+        // Create card element
+    const card1 = document.createElement('div');
+    card1.classList.add('card1');
+
+    // Create and append title
+    const title1 = document.createElement('h2');
+    title1.textContent = "Dynamic Card Title";
+    card1.appendChild(title1);
+
+    // Create and append description
+    const description1 = document.createElement('p');
+    description1.textContent = "This description was created entirely using JavaScript.";
+    card1.appendChild(description1);
+
+            // Create card element
+    const card2 = document.createElement('div');
+    card2.classList.add('card1');
+
+    // Create and append title
+    const title2 = document.createElement('h2');
+    title2.textContent = "Dynamic Card Title";
+    card2.appendChild(title2);
+
+    // Create and append description
+    const description2 = document.createElement('p');
+    description2.textContent = "This description was created entirely using JavaScript.";
+    card2.appendChild(description2);
+
+
+    // Append card to the container
+    app.appendChild(card);
+    app.appendChild(card1);
+    app.appendChild(card2);
+
+    card.addEventListener("click", (e) => {
+  card1.classList.replace("card", "card1")
+  card2.classList.replace("card", "card1")
+  card.classList.replace("card1","card")
+    })
+    card1.addEventListener("click", (e) => {
+  card.classList.replace("card", "card1")
+  card2.classList.replace("card", "card1")
+  card1.classList.replace("card1","card")
+    })
+    card2.addEventListener("click", (e) => {
+  card.classList.replace("card", "card1")
+  card1.classList.replace("card", "card1")
+  card2.classList.replace("card1","card")
+    })
+  
+
+  </script>
+</body>
+</html>

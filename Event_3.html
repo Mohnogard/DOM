@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Button</title>
+</head>
+<style>
+body{
+  justify-items: center;
+}
+.pretty{
+  color: brown;
+}
+
+.large{
+  font-size: large;
+}
+
+.box-style {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+</style>
+
+<body>
+<div id="app">
+</div>
+
+<script>
+
+// Get base container
+const app = document.getElementById("app");
+
+// Create toggling button
+const toggle = document.createElement("button");
+toggle.textContent = "Open Menu";
+toggle.id = "toggle";
+toggle.classList.add("box-style")
+
+// Create original text
+const mytext = document.createElement("div")
+mytext.textContent = "Change me"
+mytext.style.border='1px solid black'
+mytext.style.textAlign='center'
+
+const mylist = document.createElement("ul")
+const item = document.createElement("li")
+const buttons = document.createElement("button")
+
+// Assemble everything
+app.appendChild(toggle);
+app.appendChild(mytext)
+app.appendChild(mylist)
+mylist.appendChild(item)
+
+
+// Start with "original", then after clicking it changes
+toggle.addEventListener("click", (e) => {
+  if(mytext.textContent==="Original"){
+    mytext.textContent="New"
+  }
+  else{
+    mytext.textContent="Original"
+  }
+  mytext.classList.toggle('pretty')
+  mytext.classList.add('large')
+});
+
+ul.addEventListener("click", (e) => {
+if (e.target.classList.contains("delete")) {
+e.target.parentElement.remove();
+  }
+});
+
+  </script>
+</body>
+</html>
