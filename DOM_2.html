@@ -29,30 +29,24 @@
   <div id="app"></div>
 
   <script>
-    // Select container
     const app = document.getElementById('app');
 
-    // Create card element
     const card = document.createElement('div');
     card.classList.add('card');
 
-    // Create and append title
     const title = document.createElement('h2');
     title.textContent = "Dynamic Card Title";
     card.appendChild(title);
 
-    // Create and append description
     const description = document.createElement('p');
     description.textContent = "This description was created entirely using JavaScript.";
     card.appendChild(description);
 
-    // Create and append the image
     const image = document.createElement('img');
     image.src = "image.jpg";
     image.alt = "Card Image";
     card.appendChild(image);
 
-    // Append card to the container
     app.appendChild(card);
   </script>
 </body>

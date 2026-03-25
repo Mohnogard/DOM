@@ -12,23 +12,18 @@
 
 <script>
 
-// Get base container
 const app = document.getElementById("app");
 
-// Create the input
 const input = document.createElement("input");
 input.placeholder = "Type here:";
 
-// Create display
 const output = document.createElement("p");
 output.style.border="1px black solid"
 output.style.padding='2px'
 
-// Add to page
 app.appendChild(input);
 app.appendChild(output);
 
-// Listen to typign
 input.addEventListener("input", (e) => {
   output.textContent = e.target.value;
 });

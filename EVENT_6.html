@@ -32,11 +32,8 @@
 
 <script>
 
-// Get base container
 const app = document.getElementById("app");
 
-
-// Create original text
 const mytext = document.createElement("div")
 mytext.textContent =Number(0)
 
@@ -49,12 +46,10 @@ decrease.textContent = "-";
 mytext.style.border='1px solid black'
 mytext.style.textAlign='center'
 
-// Assemble everything
 app.appendChild(increase);
 app.appendChild(decrease)
 app.appendChild(mytext)
 
-// Start with "original", then after clicking it changes
 let count = 0;
 
 app.addEventListener("click", (e) => {
@@ -66,7 +61,6 @@ app.addEventListener("click", (e) => {
 
   mytext.textContent = count;
 
-  // Update color
   if (count < 0) {
     mytext.classList.add("RED");
     mytext.classList.remove("GREEN");
@@ -79,8 +73,6 @@ app.addEventListener("click", (e) => {
   }
 });
 
-
-console.log(count)
   </script>
 </body>
 </html>
